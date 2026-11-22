@@ -294,6 +294,8 @@
       .radio-card input:focus-visible + span { outline: 3px solid var(--gold); outline-offset: 2px; }
       .size-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
       .size-row.three { grid-template-columns: repeat(3, 1fr); }
+      .size-row.two { grid-template-columns: repeat(2, 1fr); }
+      .shape-note { margin: 8px 0 0; font-weight: 700; color: var(--ink); }
       .field p.hint { margin: 6px 0 0; }
       .hint a { color: var(--accent); font-weight: 700; }
       .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -711,9 +713,9 @@
           <div class="price-chips">
             <span class="chip">Stickers <b>$3.50&ndash;$10</b></span>
             <span class="chip">Magnets <b>$7.50&ndash;$10.50</b></span>
-            <span class="chip">Shirts <b>$26.50&ndash;$33.50</b></span>
+            <span class="chip">Shirts <b>$26.50&ndash;$29.50</b></span>
             <span class="chip">Car stickers <b>$6.50&ndash;$15.50</b></span>
-            <span class="chip">Trio bundle <b>$33.50&ndash;$47 a set &middot; save $5</b></span>
+            <span class="chip">Trio bundle <b>$33.50&ndash;$43 a set &middot; save $5</b></span>
             <span class="chip">Mix &amp; Match <b>any 3 stickers or magnets, $13.50&ndash;$31.50</b></span>
             <span class="chip">Free shipping <b>on every order</b></span>
             <span class="chip">Stickers <b>25% off 11+ of the same design &amp; size</b></span>
@@ -854,8 +856,7 @@
               <p>Your design front and center on a soft tee, priced by how big the design is. Shirt sizes run Small to 3XL — 2XL and 3XL add $5. Black shirts add $3 — the black blank and the dark-fabric transfer paper both cost more. Order 6 or more of the same design and size and they&rsquo;re <strong>5% off</strong>.</p>
               <table class="size-table">
                 <tr><td>Design up to 8&Prime; wide</td><td>$26.50</td></tr>
-                <tr><td>Design up to 10&Prime; wide</td><td>$29.50</td></tr>
-                <tr><td>Design up to 11.5&Prime; wide</td><td>$33.50</td></tr>
+                <tr><td>Design up to 9&Prime; wide</td><td>$29.50</td></tr>
               </table>
             </div>
             <div class="product">
@@ -883,8 +884,8 @@
               <p>One design on a sticker, a magnet, <em>and</em> a shirt — the same design on all three pieces. Every Trio is <strong>$5 less</strong> than buying the three pieces on their own:</p>
               <table class="size-table">
                 <tr><td><strong>Small</strong> — 3&Prime; sticker $4.50 + 3&Prime; magnet $7.50 + shirt with design up to 8&Prime; $26.50 = $38.50 bought separately</td><td><b>$33.50</b><span class="save-badge">Save $5</span></td></tr>
-                <tr><td><strong>Medium</strong> — 4&Prime; sticker $5.50 + 4&Prime; magnet $8.50 + shirt with design up to 10&Prime; $29.50 = $43.50 bought separately</td><td><b>$38.50</b><span class="save-badge">Save $5</span></td></tr>
-                <tr><td><strong>Large</strong> — 6&Prime; sticker $8 + 6&Prime; magnet $10.50 + shirt with design up to 11.5&Prime; $33.50 = $52 bought separately</td><td><b>$47</b><span class="save-badge">Save $5</span></td></tr>
+                <tr><td><strong>Medium</strong> — 4&Prime; sticker $5.50 + 4&Prime; magnet $8.50 + shirt with design up to 9&Prime; $29.50 = $43.50 bought separately</td><td><b>$38.50</b><span class="save-badge">Save $5</span></td></tr>
+                <tr><td><strong>Large</strong> — 6&Prime; sticker $8 + 6&Prime; magnet $10.50 + shirt with design up to 9&Prime; $29.50 = $48 bought separately</td><td><b>$43</b><span class="save-badge">Save $5</span></td></tr>
               </table>
               <p>The shirt size you wear (S to 3XL) is separate from the design sizes above — you pick it when you build your Trio. Shirt extras still apply: black shirt +$3, 2XL/3XL +$5.</p>
               <p>Adding the three pieces to your order one by one instead? They combine into a Trio on their own, the $5 comes off automatically, and you can split them back apart in your order if you change your mind.</p>
@@ -976,6 +977,7 @@
                 <span class="label" id="item-size-label"><span class="step-num" aria-hidden="true">3</span><span id="item-size-text">Sticker size</span></span>
                 <div class="size-row" id="size-row" role="radiogroup" aria-labelledby="item-size-label"></div>
                 <p class="hint" id="size-hint"></p>
+                <p class="shape-note" id="shape-note" hidden><strong>If you don&rsquo;t want it square, give the measurements, such as 5x3.</strong></p>
               </div>
 
               <div class="field" id="vinyl-color-field">
@@ -1376,16 +1378,16 @@
             <ul>
               <li><span>Stickers</span><b>$3.50&ndash;$10</b></li>
               <li><span>Magnets</span><b>$7.50&ndash;$10.50</b></li>
-              <li><span>Custom shirts</span><b>$26.50&ndash;$33.50</b></li>
+              <li><span>Custom shirts</span><b>$26.50&ndash;$29.50</b></li>
               <li><span>Car stickers</span><b>$6.50&ndash;$15.50</b></li>
-              <li><span>Trio bundles</span><b>$33.50&ndash;$47 a set</b></li>
+              <li><span>Trio bundles</span><b>$33.50&ndash;$43 a set</b></li>
               <li><span>Mix &amp; Match Packs</span><b>$13.50&ndash;$31.50</b></li>
             </ul>
             <p style="margin-top:12px">Priced by size. Discounts are per design and size: stickers are 25% off at 11 or more of the same design and size, magnets are 10% off at 6 or more of the same design and size, and shirts are 5% off at 6 or more of the same design and size. Black shirts +$3, 2XL/3XL +$5; extra vinyl colors +$3 each (car stickers: maximum 5 per order).</p>
           </div>
           <div>
             <h3>Bundles</h3>
-            <p>Trio bundles run $33.50&ndash;$47 a set — the same design on a sticker, a magnet, and a shirt, $5 less than the three pieces bought separately. Mix &amp; Match Packs put any 3 stickers or magnets, all one size, in a single pack for $13.50&ndash;$31.50 — the three pieces at their regular prices added together.</p>
+            <p>Trio bundles run $33.50&ndash;$43 a set — the same design on a sticker, a magnet, and a shirt, $5 less than the three pieces bought separately. Mix &amp; Match Packs put any 3 stickers or magnets, all one size, in a single pack for $13.50&ndash;$31.50 — the three pieces at their regular prices added together.</p>
           </div>
           <div>
             <h3>Ordering &amp; payment</h3>
@@ -1439,6 +1441,7 @@
           <span class="label" id="chooser-size-label">2 &middot; Pick a size</span>
           <div class="size-row" id="chooser-sizes" role="radiogroup" aria-labelledby="chooser-size-label"></div>
           <p class="hint" id="chooser-size-hint"></p>
+          <p class="shape-note" id="chooser-shape-note" hidden><strong>If you don&rsquo;t want it square, give the measurements, such as 5x3.</strong></p>
         </div>
 
         <div id="chooser-shirt-fields" hidden>
@@ -1516,8 +1519,7 @@
         ],
         shirt: [
           { id: "8", label: 'Up to 8"', price: 26.5 },
-          { id: "10", label: 'Up to 10"', price: 29.5 },
-          { id: "11.5", label: 'Up to 11.5"', price: 33.5 }
+          { id: "9", label: 'Up to 9"', price: 29.5 }
         ],
         carsticker: DECAL_SIZES
       };
@@ -1525,7 +1527,7 @@
       var SIZE_HINTS = {
         sticker: "For scale: 3\u2033 is about as wide as a credit card. 8\u2033 is the biggest sticker size.",
         magnet: "For scale: 3\u2033 is about as wide as a credit card. 6\u2033 is the biggest that fits the print-then-cut sheet.",
-        shirt: "This is how wide the design prints on the shirt. Up to 11.5\u2033 is the widest a 12\u2033 Cricut mat holds.",
+        shirt: "This is how wide the design prints on the shirt. Up to 9\u2033 is the largest size for a shirt design.",
         carsticker: "Priced by the longest side. 11.5\u2033 is the biggest one piece a 12\u2033 Cricut mat holds. Simple, bold designs cut best in vinyl — I\u2019ll confirm your design works when I reply."
       };
       /* Car stickers: cut vinyl, max 5 per
@@ -1569,8 +1571,8 @@
          the cart auto-combine below matches on. */
       var TRIO_TIERS = [
         { id: "small", label: 'Small trio', detail: '3" sticker + 3" magnet + shirt design up to 8"', price: 33.5, pieces: 38.5, stickerSize: '3"', magnetSize: '3"', shirtSize: 'Up to 8"', maths: '3" sticker $4.50 + 3" magnet $7.50 + shirt design up to 8" $26.50 = $38.50' },
-        { id: "medium", label: 'Medium trio', detail: '4" sticker + 4" magnet + shirt design up to 10"', price: 38.5, pieces: 43.5, stickerSize: '4"', magnetSize: '4"', shirtSize: 'Up to 10"', maths: '4" sticker $5.50 + 4" magnet $8.50 + shirt design up to 10" $29.50 = $43.50' },
-        { id: "large", label: 'Large trio', detail: '6" sticker + 6" magnet + shirt design up to 11.5"', price: 47, pieces: 52, stickerSize: '6"', magnetSize: '6"', shirtSize: 'Up to 11.5"', maths: '6" sticker $8 + 6" magnet $10.50 + shirt design up to 11.5" $33.50 = $52' }
+        { id: "medium", label: 'Medium trio', detail: '4" sticker + 4" magnet + shirt design up to 9"', price: 38.5, pieces: 43.5, stickerSize: '4"', magnetSize: '4"', shirtSize: 'Up to 9"', maths: '4" sticker $5.50 + 4" magnet $8.50 + shirt design up to 9" $29.50 = $43.50' },
+        { id: "large", label: 'Large trio', detail: '6" sticker + 6" magnet + shirt design up to 9"', price: 43, pieces: 48, stickerSize: '6"', magnetSize: '6"', shirtSize: 'Up to 9"', maths: '6" sticker $8 + 6" magnet $10.50 + shirt design up to 9" $29.50 = $48' }
       ];
       var PRODUCT_NAMES = { sticker: "Sticker", magnet: "Magnet", shirt: "Custom shirt", carsticker: "Car sticker", trio: "Trio Bundle", mixpack: "Mix & Match Pack" };
       var DESIGNS = [
@@ -1663,6 +1665,7 @@
       var sizeRow = document.getElementById("size-row");
       var itemSizeText = document.getElementById("item-size-text");
       var sizeHint = document.getElementById("size-hint");
+      var shapeNote = document.getElementById("shape-note");
       var qtyInput = document.getElementById("qty-input");
       var lineTotalEl = document.getElementById("line-total");
       var summaryList = document.getElementById("summary-list");
@@ -2196,7 +2199,11 @@
         var product = selectedProduct();
         itemSizeText.textContent = SIZE_LABELS[product];
         sizeHint.textContent = SIZE_HINTS[product];
-        sizeRow.className = "size-row" + (SIZES[product].length === 3 ? " three" : "");
+        /* The square/measurements note belongs to the sticker and
+           magnet sizes only — it shows for those two products and
+           stays hidden for shirts and car stickers. */
+        if (shapeNote) shapeNote.hidden = !(product === "sticker" || product === "magnet");
+        sizeRow.className = "size-row" + (SIZES[product].length === 3 ? " three" : (SIZES[product].length === 2 ? " two" : ""));
         sizeRow.innerHTML = "";
         SIZES[product].forEach(function (s, i) {
           var lab = document.createElement("label");
@@ -2911,6 +2918,7 @@
       var chooserSizeLabel = document.getElementById("chooser-size-label");
       var chooserSizes = document.getElementById("chooser-sizes");
       var chooserSizeHint = document.getElementById("chooser-size-hint");
+      var chooserShapeNote = document.getElementById("chooser-shape-note");
       var chooserShirtFields = document.getElementById("chooser-shirt-fields");
       var chooserShirtSize = document.getElementById("chooser-shirt-size");
       var chooserShirtColor = document.getElementById("chooser-shirt-color");
@@ -2964,9 +2972,10 @@
         chooserShirtFields.hidden = p !== "shirt";
         chooserSizes.innerHTML = "";
         if (p) {
-          chooserSizes.className = "size-row" + (SIZES[p].length === 3 ? " three" : "");
+          chooserSizes.className = "size-row" + (SIZES[p].length === 3 ? " three" : (SIZES[p].length === 2 ? " two" : ""));
           chooserSizeLabel.textContent = "2 · " + SIZE_LABELS[p];
           chooserSizeHint.textContent = SIZE_HINTS[p];
+          if (chooserShapeNote) chooserShapeNote.hidden = !(p === "sticker" || p === "magnet");
           SIZES[p].forEach(function (s) {
             var lab = document.createElement("label");
             lab.className = "radio-card";
